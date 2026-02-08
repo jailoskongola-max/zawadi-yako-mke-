@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="sw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pendo Linalochanua ❤️</title>
+    <style>
+        body {
+            background-color: #ffe8ee; /* Pink nyepesi kama background */
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            font-family: 'Arial', sans-serif;
+            overflow: hidden; /* Ficha scroll bar */
+        }
+
+        .container {
+            text-align: center;
+            width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        /* Styles za Mti wa SVG */
+        svg {
+            width: 90%;
+            max-width: 400px; /* Ukubwa wa juu wa mti */
+            height: auto;
+            display: block;
+            margin: 0 auto 20px auto;
+            filter: drop-shadow(2px 2px 5px rgba(0,0,0,0.1));
+        }
+
+        .trunk {
+            fill: #8B4513; /* Rangi ya shina */
+        }
+
+        .branch {
+            fill: none;
+            stroke: #A0522D; /* Rangi ya matawi */
+            stroke-width: 4;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        .heart-leaf {
+            fill: #ff69b4; /* Pinki ya moto */
+            transform-origin: center center;
+            opacity: 0; /* Mioyo itaanza ikiwa imefichwa */
+            animation: heartBloom 1.5s forwards ease-out; /* Animation ya kuchanua */
+        }
+
+        @keyframes heartBloom {
+            0% { opacity: 0; transform: scale(0.5) translateY(10px); }
+            100% { opacity: 1; transform: scale(1) translateY(0px); }
+        }
+
+        /* Styles za Box la Ujumbe */
+        .message-box {
+            background: linear-gradient(to top, #fff0f3, #ffffff);
+            padding: 25px;
+            border-radius: 25px;
+            box-shadow: 0 8px 20px rgba(255, 77, 109, 0.2);
+            width: 85%;
+            max-width: 350px;
+            border: 3px solid #ff4d6d; /* Mpaka wa pinki */
+            text-align: center;
+        }
+
+        h2 {
+            color: #c9184a; /* Rangi nyekundu iliyofifia */
+            margin-top: 0;
+            font-size: 1.8em;
+        }
+
+        #timer {
+            font-size: 1.2rem;
+            color: #ff4d6d;
+            font-weight: bold;
+            background: #fff0f3;
+            padding: 10px;
+            border-radius: 15px;
+            margin: 15px 0;
+            box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        .quote {
+            font-style: italic;
+            color: #590d22;
+            font-size: 0.9em;
+            margin-bottom: 10px;
+        }
+        
+        #start-button {
+            background: linear-gradient(to right, #ff4d6d, #ff8fa3);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.2em;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(255, 77, 109, 0.4);
+            transition: transform 0.2s ease-in-out;
+            animation: pulseButton 1.5s infinite;
+        }
+
+        #start-button:hover {
+            transform: scale(1.05);
+        }
+
+        @keyframes pulseButton {
+            0% { transform: scale(1); box-shadow: 0 5px 15px rgba(255, 77, 109, 0.4); }
+            50% { transform: scale(1.03); box-shadow: 0 8px 20px rgba(255, 77, 109, 0.6); }
+            100% { transform: scale(1); box-shadow: 0 5px 15px rgba(255, 77, 109, 0.4); }
+        }
+    </style>
+</head>
+<body>
+
+    <button id="start-button" onclick="anzishaMahaba()">FUNGUA ZAWADI YAKO ❤️</button>
+
+    <div id="content-area" class="container" style="display:none;">
+        <svg viewBox="0 0 200 200">
+            <path class="trunk" d="M95 180 Q100 140 100 100 L110 100 Q110 140 115 180 Z" />
+
+            <path class="branch" d="M105 130 Q140 140 160 150" />
+            <text x="160" y="150" font-size="20" class="heart-leaf" style="animation-delay: 0.5s;">❤️</text>
+            <text x="140" y="130" font-size="18" class="heart-leaf" style="animation-delay: 0.8s;">❤️</text>
+
+            <path class="branch" d="M100 140 Q70 120 50 140" />
+            <text x="50" y="140" font-size="20" class="heart-leaf" style="animation-delay: 1.0s;">❤️</text>
+            <text x="70" y="100" font-size="18" class="heart-leaf" style="animation-delay: 1.3s;">❤️</text>
+            <text x="30" y="150" font-size="16" class="heart-leaf" style="animation-delay: 1.6s;">❤️</text>
+
+            <path class="branch" d="M102 110 Q120 100 140 100" />
+            <text x="140" y="100" font-size="18" class="heart-leaf" style="animation-delay: 1.9s;">❤️</text>
+            <text x="160" y="90" font-size="16" class="heart-leaf" style="animation-delay: 2.2s;">❤️</text>
+
+            <path class="branch" d="M100 120 Q80 90 60 100" />
+            <text x="60" y="100" font-size="18" class="heart-leaf" style="animation-delay: 2.5s;">❤️</text>
+            <text x="70" y="130" font-size="16" class="heart-leaf" style="animation-delay: 2.8s;">❤️</text>
+
+            <path class="branch" d="M100 100 Q90 70 80 80" />
+            <text x="80" y="80" font-size="18" class="heart-leaf" style="animation-delay: 3.1s;">❤️</text>
+            <path class="branch" d="M105 100 Q110 70 120 80" />
+            <text x="120" y="80" font-size="18" class="heart-leaf" style="animation-delay: 3.4s;">❤️</text>
+            <path class="branch" d="M100 90 Q105 60 110 70" />
+            <text x="110" y="70" font-size="20" class="heart-leaf" style="animation-delay: 3.7s;">❤️</text>
+             <text x="95" y="55" font-size="22" class="heart-leaf" style="animation-delay: 4.0s;">❤️</text>
+             <text x="125" y="60" font-size="18" class="heart-leaf" style="animation-delay: 4.3s;">❤️</text>
+             <text x="60" y="90" font-size="16" class="heart-leaf" style="animation-delay: 4.6s;">❤️</text>
+
+        </svg>
+
+        <div class="message-box">
+            <h2>Pendo Letu Linachanua ❤️</h2>
+            <div id="timer">Inapakia muda...</div>
+            <p class="quote">"Kila siku tunapoamka, napenda zaidi na zaidi..."</p>
+        </div>
+    </div>
+
+    <script>
+        // WEKA TAREHE YAKO HAPA: (Mwaka, Mwezi-1, Siku)
+        // Mfano: 2024, 0, 15 maana yake 15 Januari 2024
+        const tareheYaKuanzaPendo = new Date(2024, 0, 15); 
+
+        function anzishaMahaba() {
+            document.getElementById('start-button').style.display = 'none';
+            document.getElementById('content-area').style.display = 'block';
+            
+            // Anza timer mara moja na kisha kila sekunde
+            updateTimer();
+            setInterval(updateTimer, 1000);
+        }
+
+        function updateTimer() {
+            const sasa = new Date();
+            const diff = sasa - tareheYaKuanzaPendo;
+
+            // Hesabu siku, masaa, dakika, sekunde
+            const siku = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const masaa = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const dk = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const sek = Math.floor((diff % (1000 * 60)) / 1000);
+
+            document.getElementById('timer').innerHTML = 
+                ${siku} Siku : ${masaa} Saa : ${dk} Dk : ${sek} Sek;
+        }
+    </script>
+</body>
+</html>
